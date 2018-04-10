@@ -41,7 +41,7 @@ class JsonView extends View
             $content['status'] = "NOK";
         }
 
-        $content = array_merge($content, $this->viewVars);
+        $content['result'] = $this->viewVars;
 
         $this->Blocks->set('content', $this->renderLayout(json_encode($content), $this->layout));
 
