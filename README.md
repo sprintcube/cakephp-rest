@@ -151,6 +151,20 @@ public function login()
 
 And it will return the token in response. So, in next api calls, user can use that token for authorization. You can add whatever data is required in your payload.
 
+By default, the plugin uses the predefined key and algorithm to generate JWT token. You can update this configuration by creating `config/rest.php` file. The content of the this configuration file will be as following,
+
+```php
+<?php
+return [
+    'Rest' => [
+        'jwt' => [
+            'key' => 'PUT YOUR KEY HERE', // it should contain alphanumeric string with symbols
+            'algorithm' => 'HS256' // See https://tools.ietf.org/html/draft-ietf-jose-json-web-algorithms-40
+        ]
+    ]
+];
+```
+
 ### Access token data
 If there is a valid token available in request, you can access it in your controller using the `token` and `payload` properties.
 
