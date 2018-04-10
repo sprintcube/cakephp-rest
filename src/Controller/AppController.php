@@ -7,8 +7,18 @@ use App\Controller\AppController as BaseController;
 class AppController extends BaseController
 {
 
+    /**
+     * Token
+     *
+     * @var string
+     */
     public $token = "";
 
+    /**
+     * Payload data decoded from token
+     *
+     * @var mixed
+     */
     public $payload = [];
 
     /**
