@@ -30,9 +30,11 @@ class RestErrorMiddleware extends ErrorHandlerMiddleware
 
                 return $next($request, $response);
             } catch (Exception $e) {
+
                 return $this->handleException($e, $request, $response);
             }
         } else {
+
             return $next($request, $response);
         }
     }
