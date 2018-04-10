@@ -27,6 +27,7 @@ class RestErrorMiddleware extends ErrorHandlerMiddleware
         if (Configure::read('useRestErrorHandler')) {
             try {
                 $this->exceptionRenderer = \Rest\Error\RestExceptionRenderer::class;
+
                 return $next($request, $response);
             } catch (Exception $e) {
                 return $this->handleException($e, $request, $response);

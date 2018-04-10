@@ -3,7 +3,6 @@
 namespace Rest\Controller;
 
 use App\Controller\AppController as BaseController;
-use Rest\Error\RestError;
 
 class AppController extends BaseController
 {
