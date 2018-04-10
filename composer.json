@@ -1,0 +1,42 @@
+{
+    "name": "pnglabz/cakephp-rest",
+    "description": "Rest API plugin for CakePHP 3",
+    "type": "cakephp-plugin",
+    "keywords": ["CakePHP", "Rest", "Api", "Rest Api", "CakePHP Rest", "CakePHP Rest Api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PNG Labz",
+            "homepage": "https://www.pnglabz.com",
+            "role": "Author"
+        },
+        {
+            "name": "Community",
+            "homepage": "https://github.com/pnglabz/cakephp-rest/graphs/contributors"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/pnglabz/cakephp-rest",
+        "issues": "https://github.com/pnglabz/cakephp-rest/issues"
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "cakephp/cakephp": "^3.4.0",
+        "firebase/php-jwt": "^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0",
+        "cakephp/cakephp-codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rest\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
