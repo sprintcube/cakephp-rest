@@ -26,7 +26,6 @@ class AuthorizationMiddleware
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, $next)
     {
-
         $params = (array)$request->getAttribute('params', []);
 
         if (!isset($params['isRest']) || !$params['isRest']) {

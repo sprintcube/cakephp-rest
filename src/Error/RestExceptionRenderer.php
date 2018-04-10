@@ -71,10 +71,17 @@ class RestExceptionRenderer extends ExceptionRenderer
         return $this->_prepareResponse();
     }
 
+    /**
+     * Generates the response using the controller object.
+     *
+     * @return \Cake\Http\Response A response object that can be sent.
+     */
     protected function _prepareResponse()
     {
         $this->controller->viewBuilder()->className('Rest.Json');
 
-        return $this->controller->render();
+        $this->controller->render();
+
+        return $this->_shutdown();
     }
 }

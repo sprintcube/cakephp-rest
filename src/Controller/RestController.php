@@ -10,7 +10,7 @@ class RestController extends AppController
     /**
      * beforeRender callback
      *
-     * @param Event $event
+     * @param Event $event An Event instance
      * @return null
      */
     public function beforeRender(Event $event)
