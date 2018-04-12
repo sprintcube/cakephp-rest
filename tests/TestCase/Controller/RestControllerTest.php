@@ -40,4 +40,15 @@ class RestControllerTest extends IntegrationTestCase
         $viewClass = $this->controller->viewBuilder()->className();
         $this->assertEquals('Rest.Json', $viewClass);
     }
+
+    /**
+     * Clears the state used for requests.
+     *
+     * @return void
+     */
+    public function tearDown()
+    {
+        parent::tearDown();
+        unset($this->controller);
+    }
 }
