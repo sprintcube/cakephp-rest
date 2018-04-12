@@ -44,7 +44,6 @@ class FooControllerTest extends IntegrationTestCase
             ]
         ]);
 
-
         $this->get('/foo/doe');
 
         $this->assertResponseOk();
