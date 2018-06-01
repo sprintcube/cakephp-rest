@@ -2,7 +2,6 @@
 
 namespace Rest\Test\TestCase\Controller;
 
-use Cake\Event\Event;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
@@ -10,6 +9,17 @@ use Cake\TestSuite\IntegrationTestCase;
  */
 class FooControllerTest extends IntegrationTestCase
 {
+
+    /**
+     * Setup method.
+     *
+     * @return void
+     */
+    public function setUp()
+    {
+        parent::setUp();
+        $this->useHttpServer(true);
+    }
 
     /**
      * Test method
