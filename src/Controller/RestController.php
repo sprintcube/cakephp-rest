@@ -17,7 +17,7 @@ class RestController extends AppController
     {
         parent::beforeRender($event);
 
-        $this->viewBuilder()->className('Rest.Json');
+        $this->viewBuilder()->setClassName('Rest.Json');
 
         return null;
     }
