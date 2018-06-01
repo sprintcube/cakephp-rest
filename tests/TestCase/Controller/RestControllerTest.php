@@ -37,7 +37,7 @@ class RestControllerTest extends IntegrationTestCase
     public function testBeforeRender()
     {
         $this->controller->beforeRender(new Event('Controller.beforeRender'));
-        $viewClass = $this->controller->viewBuilder()->setClassName();
+        $viewClass = $this->controller->viewBuilder()->getClassName();
         $this->assertEquals('Rest.Json', $viewClass);
     }
 
