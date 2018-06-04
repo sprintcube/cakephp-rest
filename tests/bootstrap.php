@@ -113,11 +113,13 @@ Cake\Core\Configure::write('Session', [
 Cake\Log\Log::setConfig([
     'debug' => [
         'engine' => 'Cake\Log\Engine\FileLog',
+        'path' => LOGS,
         'levels' => ['notice', 'info', 'debug'],
         'file' => 'debug',
     ],
     'error' => [
         'engine' => 'Cake\Log\Engine\FileLog',
+        'path' => LOGS,
         'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
         'file' => 'error',
     ]
@@ -125,9 +127,6 @@ Cake\Log\Log::setConfig([
 
 
 Cake\Core\Plugin::load('Rest', ['path' => ROOT . DS, 'autoload' => true, 'bootstrap' => true]);
-
-Cake\Routing\DispatcherFactory::add('Routing');
-Cake\Routing\DispatcherFactory::add('ControllerFactory');
 
 // Ensure default test connection is defined
 if (!getenv('db_dsn')) {
