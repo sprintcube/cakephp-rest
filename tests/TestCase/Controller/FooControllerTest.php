@@ -26,13 +26,13 @@ class FooControllerTest extends IntegrationTestCase
      *
      * @return void
      */
-    // public function testGet()
-    // {
-    //     $this->get('/foo/bar');
-    //     $this->assertResponseOk();
-    //     $this->assertResponseCode(200);
-    //     $this->assertResponseEquals('{"status":"OK","result":{"bar":{"falanu":["dhikanu","tamburo"]}}}');
-    // }
+    public function testGet()
+    {
+        $this->get('/foo/bar');
+        $this->assertResponseOk();
+        $this->assertResponseCode(200);
+        $this->assertResponseEquals('{"status":"OK","result":{"bar":{"falanu":["dhikanu","tamburo"]}}}');
+    }
 
     /**
      * Test method

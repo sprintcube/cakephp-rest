@@ -37,11 +37,14 @@ class RestExceptionRenderer extends ExceptionRenderer
             $message = $this->_message($exception, $code);
         }
 
-        if ($exception instanceof CakeException) {
-            $this->controller->response->header($exception->responseHeader());
-        }
+        $response = $this->controller->getResponse();
 
-        $this->controller->response->withStatus($code);
+        if ($exception instanceof CakeException) {
+            foreach ((array)$exception->responseHeader() as $key => $value) {
+                $response = $response->withHeader($key, $value);
+            }
+        }
+        $response = $response->withStatus($code);
 
         $viewVars = [
             'message' => $message,
@@ -64,6 +67,8 @@ class RestExceptionRenderer extends ExceptionRenderer
         if ($unwrapped instanceof CakeException && $isDebug) {
             $this->controller->set($unwrapped->getAttributes());
         }
+
+        $this->controller->response = $response;
 
         return $this->_prepareResponse();
     }
