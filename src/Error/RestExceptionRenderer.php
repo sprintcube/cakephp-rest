@@ -10,17 +10,12 @@ use Rest\Controller\ErrorController;
 
 class RestExceptionRenderer extends ExceptionRenderer
 {
-//    protected function _getController()
-//    {
-//        return new ErrorController();
-//    }
-
     /**
      * Renders the response for the exception.
      *
      * @return \Cake\Http\Response The response to be sent.
      */
-    public function render($showOriginamMessage = false)
+    public function render()
     {
 
         $exception = $this->error;
