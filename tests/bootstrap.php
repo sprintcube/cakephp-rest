@@ -94,6 +94,13 @@ $cache = [
         'path' => CACHE . 'models/',
         'serialize' => 'File',
         'duration' => '+10 seconds'
+    ],
+    '_cake_routes_' => [
+        'className' => 'File',
+        'prefix' => 'rest_my_app_cake_routes_',
+        'path' => CACHE,
+        'serialize' => 'File',
+        'duration' => '+10 seconds'
     ]
 ];
 
@@ -102,6 +109,20 @@ Cake\Cache\Cache::setConfig($cache);
 Cake\Core\Configure::write('Session', [
     'defaults' => 'php'
 ]);
+
+Cake\Log\Log::setConfig([
+    'debug' => [
+        'engine' => 'Cake\Log\Engine\FileLog',
+        'levels' => ['notice', 'info', 'debug'],
+        'file' => 'debug',
+    ],
+    'error' => [
+        'engine' => 'Cake\Log\Engine\FileLog',
+        'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+        'file' => 'error',
+    ]
+]);
+
 
 Cake\Core\Plugin::load('Rest', ['path' => ROOT . DS, 'autoload' => true, 'bootstrap' => true]);
 

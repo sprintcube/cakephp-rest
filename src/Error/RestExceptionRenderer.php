@@ -22,12 +22,9 @@ class RestExceptionRenderer extends ExceptionRenderer
      */
     public function render($showOriginamMessage = false)
     {
-        Log::info('Rest\Error\RestExceptionRenderer::render');
 
         $exception = $this->error;
         $code = $this->_code($exception);
-
-        \Cake\Log\Log::debug($exception);
 
         $unwrapped = $this->_unwrap($exception);
 
@@ -44,7 +41,7 @@ class RestExceptionRenderer extends ExceptionRenderer
             $this->controller->response->header($exception->responseHeader());
         }
 
-        $this->controller->response->statusCode($code);
+        $this->controller->response->withStatus($code);
 
         $viewVars = [
             'message' => $message,
@@ -78,7 +75,7 @@ class RestExceptionRenderer extends ExceptionRenderer
      */
     protected function _prepareResponse()
     {
-        $this->controller->viewBuilder()->className('Rest.Json');
+        $this->controller->viewBuilder()->setClassName('Rest.Json');
 
         $this->controller->render();
 

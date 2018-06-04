@@ -27,7 +27,7 @@ class JsonView extends View
             return null;
         }
 
-        $this->response->type('json');
+        $this->response->withType('json');
 
         $this->layout = "Rest.rest";
 
@@ -35,7 +35,7 @@ class JsonView extends View
             'status' => 'OK'
         ];
 
-        $code = $this->response->statusCode();
+        $code = $this->response->getStatusCode();
 
         if ($code != 200) {
             $content['status'] = "NOK";
