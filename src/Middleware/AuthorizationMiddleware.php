@@ -33,7 +33,7 @@ class AuthorizationMiddleware
         }
 
         if (isset($params['requireAuthorization']) && $params['requireAuthorization']) {
-            $header = $request->getHeader('Authorization');
+            $header = $request->getHeaderLine('Authorization');
             $qParams = $request->getQueryParams();
             $postData = $request->getParsedBody();
 
