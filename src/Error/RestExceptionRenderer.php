@@ -17,7 +17,6 @@ class RestExceptionRenderer extends ExceptionRenderer
      */
     public function render()
     {
-
         $exception = $this->error;
         $code = $this->_code($exception);
 
