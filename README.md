@@ -128,7 +128,7 @@ If you require the authentication in API, you first must grant the token to the 
 
 To generate a token, use the method from Utility class of the plugin: `JwtToken::generate()`.
 
-```
+```php
 /**
  * login method
  *
@@ -168,7 +168,7 @@ return [
 ### Access token data
 If there is a valid token available in the request, you can access it in your controller using the `token` and `payload` properties.
 
-```
+```php
 /**
  * view method
  *
