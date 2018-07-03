@@ -27,7 +27,7 @@ class JsonView extends View
             return null;
         }
 
-        $this->response->withType('json');
+        $this->response = $this->response->withType('json');
 
         $this->layout = "Rest.rest";
 
