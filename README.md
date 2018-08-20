@@ -1,9 +1,9 @@
 # Rest Plugin for CakePHP
 
-[![Build Status](https://travis-ci.org/pnglabz/cakephp-rest.svg?branch=master)](https://travis-ci.org/pnglabz/cakephp-rest)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/pnglabz/cakephp-rest/master/LICENSE)
-[![Total Downloads](https://poser.pugx.org/pnglabz/cakephp-rest/downloads)](https://packagist.org/packages/pnglabz/cakephp-rest)
-[![Latest Stable Version](https://poser.pugx.org/pnglabz/cakephp-rest/v/stable)](https://packagist.org/packages/pnglabz/cakephp-rest)
+[![Build Status](https://travis-ci.org/sprintcube/cakephp-rest.svg?branch=master)](https://travis-ci.org/sprintcube/cakephp-rest)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/sprintcube/cakephp-rest/master/LICENSE)
+[![Total Downloads](https://poser.pugx.org/sprintcube/cakephp-rest/downloads)](https://packagist.org/packages/sprintcube/cakephp-rest)
+[![Latest Stable Version](https://poser.pugx.org/sprintcube/cakephp-rest/v/stable)](https://packagist.org/packages/sprintcube/cakephp-rest)
 
 This plugin simplifies the REST API development for your CakePHP 3 application. It simply converts the output of your controller into a JSON response.
 
@@ -14,7 +14,7 @@ You can install this plugin into your CakePHP application using [composer](http:
 The recommended way to install composer packages is:
 
 ```
-composer require pnglabz/cakephp-rest
+composer require sprintcube/cakephp-rest
 ```
 
 After installation, [Load the plugin](http://book.cakephp.org/3.0/en/plugins.html#loading-a-plugin)
@@ -186,4 +186,4 @@ public function view()
 These properties are also available in your controller's `beforeFilter` method, so you can put additional authentication logic there.
 
 ## Reporting Issues
-If you have a problem with this plugin or found any bug, please open an issue on [GitHub](https://github.com/pnglabz/cakephp-rest/issues).
+If you have a problem with this plugin or found any bug, please open an issue on [GitHub](https://github.com/sprintcube/cakephp-rest/issues).
