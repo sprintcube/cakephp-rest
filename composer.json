@@ -1,23 +1,28 @@
 {
-    "name": "pnglabz/cakephp-rest",
+    "name": "sprintcube/cakephp-rest",
     "description": "Rest API plugin for CakePHP 3",
     "type": "cakephp-plugin",
     "keywords": ["CakePHP", "Rest", "Api", "Rest Api", "CakePHP Rest", "CakePHP Rest Api"],
     "license": "MIT",
     "authors": [
         {
-            "name": "PNG Labz",
-            "homepage": "https://www.pnglabz.com",
+            "name": "Narendra Vaghela",
+            "homepage": "https://www.narendravaghela.com",
+            "role": "Author"
+        },
+        {
+            "name": "SprintCube",
+            "homepage": "https://www.sprintcube.com",
             "role": "Author"
         },
         {
             "name": "Community",
-            "homepage": "https://github.com/pnglabz/cakephp-rest/graphs/contributors"
+            "homepage": "https://github.com/sprintcube/cakephp-rest/graphs/contributors"
         }
     ],
     "support": {
-        "source": "https://github.com/pnglabz/cakephp-rest",
-        "issues": "https://github.com/pnglabz/cakephp-rest/issues"
+        "source": "https://github.com/sprintcube/cakephp-rest",
+        "issues": "https://github.com/sprintcube/cakephp-rest/issues"
     },
     "require": {
         "php": ">=5.6.0",
